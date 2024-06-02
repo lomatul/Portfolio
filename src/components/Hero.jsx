@@ -1,6 +1,10 @@
 import React from 'react'
 import { HERO_CONTENT } from '../constants'
 import { delay, motion, transform } from "framer-motion"
+import { FaLinkedin } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+
 
 const container= (delay) => ({
   hidden : {x:-100, opacity:0},
@@ -12,7 +16,8 @@ const container= (delay) => ({
 })
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <section
+    id='Hero' className="border-b border-neutral-900 pb-4 lg:mb-35">
         <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2 ">
                 <div className="flex flex-col items-center lg:items-start">
@@ -32,6 +37,12 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                     variants={container(1)}className='my-2 max-w-xl py-6 font-light tracking-tighter'>{HERO_CONTENT}</motion.p>
+
+                    <div className=' flex items-center justify-center gap-4 text-4xl'>
+                              <FaFacebook/>
+                             <FaLinkedin/>
+                            <FaGithub/>
+                                </div>
                 </div>
             </div>
             <div className="w-full lg:w-1/2 lg:p-8">
@@ -46,8 +57,13 @@ const Hero = () => {
                     className="mb-6 rounded" />
               </div>
             </div>
+
+            <div className="flex flex-shrink-0 items-center ">
+            
+          </div>
+
         </div>
-    </div>
+    </section>
   )
 }
 

@@ -4,12 +4,13 @@ import { animate, motion } from 'framer-motion'
 
 const Projects = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <section 
+    id='Projects' className="border-b border-neutral-900 pb-4">
         <motion.h1      
         whileInView={{orpacity:1, y:0}}
         initial={{orpacity:0, y:-100}}
         transition={{ duration :1}}
-        className="my-20 text-center text-4xl">
+        className='my-20 text-center bg-gradient-to-r from-pink-300 via-state-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent'>
             Projects
         </motion.h1>
         <div>
@@ -37,7 +38,7 @@ const Projects = () => {
 
                     {project.technologies.map((tech, index)=>(
                         <span key={index} className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm
-                         font-medium  text-purple-900">
+                         font-medium  text-pink-300">
                             {tech}
                         </span>
                     ))}
@@ -46,7 +47,7 @@ const Projects = () => {
             )}
         </div>
       
-    </div>
+    </section>
   )
 }
 

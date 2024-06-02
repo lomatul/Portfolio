@@ -22,12 +22,14 @@ const iconVariants = (duration) => ({
 })
 const Technologies = () => {
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <section
+    id="Technologies" className="border-b border-neutral-800 pb-24">
         <motion.h1 
         whileInView={{orpacity:1, y:0}}
         initial={{orpacity:0, y:-100}}
         transition={{ duration :1.5}}
-        className="my-20 text-center text-4xl"> Technologies</motion.h1>
+        className='my-20 text-center bg-gradient-to-r from-pink-300 via-state-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent'> Technologies</motion.h1>
+
         <motion.div 
             whileInView={{orpacity:1, x:0}}
             initial={{orpacity:0, x:-100}}
@@ -47,7 +49,7 @@ const Technologies = () => {
              initial="initital"
              animate="animate"
               className="rounded-2xl border-4 border-neutral-800 p-4">
-              <SiMongodb className=" text-7xl text-cyan-400 "/>
+              <SiMongodb className=" text-7xl text-green-400 "/>
               </motion.div>
 
               <motion.div
@@ -55,7 +57,7 @@ const Technologies = () => {
               initial="initital"
               animate="animate"
               className="rounded-2xl border-4 border-neutral-800 p-4">
-              <FaNodeJs className=" text-7xl text-cyan-400 "/>
+              <FaNodeJs className=" text-7xl text-green-600 "/>
               </motion.div>
 
               <motion.div
@@ -63,7 +65,7 @@ const Technologies = () => {
               initial="initital"
               animate="animate"
               className="rounded-2xl border-4 border-neutral-800 p-4">
-              <TbBrandNextjs className=" text-7xl text-cyan-400 "/>
+              <TbBrandNextjs className=" text-7xl text-white-400 "/>
               </motion.div>
 
               <motion.div
@@ -71,7 +73,7 @@ const Technologies = () => {
               initial="initital"
               animate="animate"
               className="rounded-2xl border-4 border-neutral-800 p-4">
-              <DiHtml5 className=" text-7xl text-cyan-400 "/>
+              <DiHtml5 className=" text-7xl text-red-400 "/>
               </motion.div>
 
               <motion.div
@@ -79,7 +81,7 @@ const Technologies = () => {
               initial="initital"
               animate="animate"
               className="rounded-2xl border-4 border-neutral-800 p-4">
-              <DiCss3 className=" text-7xl text-cyan-400 "/>
+              <DiCss3 className=" text-7xl text-blue-400 "/>
               </motion.div>
 
               <motion.div
@@ -87,10 +89,14 @@ const Technologies = () => {
               initial="initital"
               animate="animate"
               className="rounded-2xl border-4 border-neutral-800 p-4">
-              <SiOracle className=" text-7xl text-cyan-400 "/>
+              <SiOracle className=" text-7xl text-red-700 "/>
             </motion.div>
         </motion.div>
-    </div>
+
+
+
+        
+    </section>
   )
 }
 
