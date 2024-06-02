@@ -4,7 +4,7 @@ import { delay, motion, transform } from "framer-motion"
 import { FaLinkedin } from 'react-icons/fa'
 import { FaFacebook } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
-
+import { Link } from 'react-router-dom'
 
 const container= (delay) => ({
   hidden : {x:-100, opacity:0},
@@ -36,14 +36,20 @@ const Hero = () => {
                     <motion.p 
                     initial="hidden"
                     animate="visible"
-                    variants={container(1)}className='my-2 max-w-xl py-6 font-light tracking-tighter'>{HERO_CONTENT}</motion.p>
+                    variants={container(1)}
+                    className='my-2 max-w-xl py-6 font-light tracking-tighter'>{HERO_CONTENT}</motion.p>
 
-                    <div className=' flex items-center justify-center gap-4 text-4xl'>
-                              <FaFacebook/>
-                             <FaLinkedin/>
-                            <FaGithub/>
-                                </div>
-                </div>
+                    <motion.div
+                     initial="hidden"
+                     animate="visible"
+                     variants={container(1.5)}
+                     className=' flex items-center justify-center gap-4 text-4xl'>
+                    <Link to='https://www.facebook.com/lomatul/'><FaFacebook/></Link> 
+                    <Link to='https://www.linkedin.com/in/lomatulmahzabin/'><FaLinkedin/></Link> 
+                    <Link to='https://github.com/lomatul'><FaGithub/></Link> 
+                   
+                    </motion.div>
+                  </div>
             </div>
             <div className="w-full lg:w-1/2 lg:p-8">
               <div className="flex justify-center">
