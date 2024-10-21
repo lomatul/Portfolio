@@ -19,6 +19,7 @@ const Experience = () => {
                             transition={{ duration :1}}
                             className="w-full lg:w-1/4">
                     <p className="mb-2 text-sm text-neutral-400"> {experience.year}</p>
+                    <img src={experience.img} alt="Company logo" className="mb-4 bg-white p-3 rounded" />
                 </motion.div>
                 <motion.div 
                             whileInView={{orpacity:1, x:0}}
@@ -29,7 +30,13 @@ const Experience = () => {
                         <span className="text-sm text-purple-100">{experience.company} </span> 
                     </h6>
 
-                        <p className="mb-4 text-neutral-400">{experience.description}</p>
+                    {experience.description.map((description, index)=>(
+                        <li key={index}>
+                            {description}
+                        </li>
+                    ))}
+
+                        
                         {experience.technologies.map((tech,index)=> (
                             <span key={index}
                             className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-pink-300">

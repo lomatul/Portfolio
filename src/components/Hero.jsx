@@ -32,7 +32,7 @@ const Hero = () => {
                      animate="visible"
                      variants={container(0.5)}
                       className='bg-gradient-to-r from-pink-300 via-state-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent'> 
-                    Frontend Developer</motion.span>
+                    Software Engineer</motion.span>
                     <motion.p 
                     initial="hidden"
                     animate="visible"
@@ -51,18 +51,34 @@ const Hero = () => {
                     </motion.div>
                   </div>
             </div>
-            <div className="w-full lg:w-1/2 lg:p-8">
-              <div className="flex justify-center">
-              <motion.img 
-                    initial={{x:100 , opacity:0}}
-                    animate={{x:0, opacity:1}}
-                    transition={{duration:1 , delay:1.2}}
-                    src="loma_img.jpg"
-                    width={300}
-                    height={380}
-                    className="mb-6 rounded" />
+            <div className="w-full lg:w-1/2 lg:p-8 relative">
+            <div className="flex justify-center relative">
+              {/* First image - Background */}
+              <motion.img
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.2 }}
+                src="probk.png"
+                width={400}
+                height={480}
+                className="mb-6 rounded"
+                style={{ position: 'relative', zIndex: 1 }} // Keep it behind the second image
+              />
+              
+              {/* Second image - Actual pic */}
+              <motion.img
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.2 }}
+                src="pro.png"
+                width={300}
+                height={380}
+                className="mb-6 rounded absolute"
+                style={{ top: '-50px', left: 0, marginLeft: 150, marginBottom: 400, zIndex: 2 }} // Adjust top to move it higher
+              />
               </div>
-            </div>
+          </div>
+
 
             <div className="flex flex-shrink-0 items-center ">
             

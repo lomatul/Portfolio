@@ -17,10 +17,33 @@ Korean learned from k-dramas. Responsible, creative, trustworthy, positive, ener
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
+    year: " May, 2023 - Present",
+    img: "kernel.png",
     role: "Junior Project Manager Intern",
     company: "Kernel International Ltd ",
-    description: `Maintaining and managing communication with teams and Clients using Slack.Arranging and attending all scrum and other meetings.`,
+    description: [
+      "Maintaining and managing communication with teams and Clients using Slack.",
+      "Arranging and attending all scrum and other meetings."  ,
+      "Taking detailed notes of all meeting discussions." ,
+      "Organizing and summarizing meeting notes, delivering them to relevant persons.",
+      "Taking notes of development updates.",
+      "Maintaining documentation on Git, Postman, and Confluence .",
+      "Assigning tasks to developers using Jira and Trello .",
+      "Doing initial testing of the tasks implemented by the development team" ],
+    technologies: ["Postman", "Confluence", "Jira", "Trello"],
+  },
+
+  {
+    year: " June, 2024- October, 2024",
+    img: "bkash.jpg",
+    role: "Data Science and Engineering Intern",
+    company: "bKash Limited ",
+    description: [
+      "Conducted extensive research on Big Data tools and components to effectively address technical challenges and optimize workflows.",
+      "Developed a sample Java project with React and Spring Boot, incorporating Spring Security for user authentication and secure access control.",
+      "Built a fully responsive internal web application using React, Tailwind CSS, and Spring Boot, aimed at streamlining internal processes and improving efficiency.",
+      "Implemented a robust log generation and log streaming solution, utilizing Kafka for real-time data streaming and Hive and Sqoop for efficient data processing and storage."
+    ],
     technologies: ["Postman", "Confluence", "Jira", "Trello"],
   },
 ];
